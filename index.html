@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interactive Study Planner</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <h1>📚 Interactive Study Planner</h1>
+    
+    <!-- Theme & Focus Buttons -->
+    <div class="top-buttons">
+        <button id="themeBtn">🌙 Dark Mode</button>
+        <button id="focusBtn">🎯 Focus Today</button>
+    </div>
+    
+    <!-- Achievement Badges -->
+    <div id="badges"></div>
+
+    <!-- Add Task Form -->
+    <div class="form">
+        <input type="text" id="subject" placeholder="Subject name">
+        <input type="number" id="hours" placeholder="Hours">
+        <select id="day">
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
+            <option>Sunday</option>
+        </select>
+        <button id="addBtn">➕ Add Study</button>
+    </div>
+
+    <!-- Content -->
+    <div class="content">
+        <!-- Task List -->
+        <div class="task-list">
+            <h2>Weekly Planner</h2>
+            <ul id="studyList"></ul>
+
+            <!-- Progress -->
+            <div class="progress-box">
+                <h2>Progress</h2>
+                <div class="progress-container">
+                    <div id="progress"></div>
+                </div>
+                <div id="percent">0%</div>
+            </div>
+        </div>
+
+        <!-- Pie Chart -->
+        <div class="chart-box">
+            <canvas id="chart" width="200" height="200"></canvas>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

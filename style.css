@@ -1,0 +1,234 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* BODY BACKGROUND */
+body {
+    min-height: 100vh;
+    background:
+        radial-gradient(circle at 20px 20px, #ffc0cb 2px, transparent 2px),
+        radial-gradient(circle at 60px 60px, #ffffff 2px, transparent 2px),
+        radial-gradient(circle at 100px 40px, #ffb6c1 2px, transparent 2px),
+        #ffe4ec;
+    background-size: 120px 120px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Center vertically */
+    padding: 20px;
+}
+
+/* MAIN CONTAINER */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    width: 90%;
+    max-width: 950px;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* HEADER */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    color: #ff69b4;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
+    margin-bottom: 20px;
+}
+
+/* TOP BUTTONS */
+.top-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Theme & Focus buttons */
+#themeBtn, #focusBtn {
+    background: #fff;
+    border: 1px solid #ff69b4;
+    color: #ff69b4;
+}
+
+#themeBtn:hover, #focusBtn:hover {
+    background: #ffedf5;
+}
+
+/* BADGES */
+#badges {
+    font-size: 22px;
+    text-align: center;
+    margin: 10px 0;
+}
+
+/* FORM */
+.form {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #ff69b4;
+    box-shadow: 0 0 5px #ff69b4;
+}
+
+#addBtn {
+    background: linear-gradient(90deg,#ffb6c1,#ff69b4);
+    color: #fff;
+}
+
+#addBtn:hover {
+    background: linear-gradient(90deg,#ff69b4,#ff4fa3);
+}
+
+/* CONTENT */
+.content {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 20px;
+}
+
+/* TASK LIST */
+.task-list h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+li {
+    padding: 12px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+li:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* ACTION BUTTONS */
+.actions {
+    display: flex;
+    gap: 8px;
+}
+
+.done {
+    background: linear-gradient(90deg,#ffb6c1,#ff69b4);
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.done:hover {
+    background: linear-gradient(90deg,#ff69b4,#ff4fa3);
+}
+
+.next {
+    background: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 6px 10px;
+    border-radius: 8px;
+}
+
+.next:hover {
+    background: #f5f5f5;
+}
+
+/* PROGRESS BAR */
+.progress-container {
+    background: #eee;
+    border-radius: 10px;
+    height: 18px;
+    overflow: hidden;
+}
+
+#progress {
+    background: linear-gradient(90deg,#ff69b4,#ffc0cb);
+    height: 100%;
+    width: 0%;
+    transition: width 0.5s ease;
+}
+
+#percent {
+    text-align: right;
+    font-size: 14px;
+    margin-top: 4px;
+}
+
+/* PIE CHART */
+.chart-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+canvas {
+    background: white;
+    border-radius: 50%;
+    padding: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* FOCUS MODE */
+.blur {
+    opacity: 0.3;
+    filter: blur(1px);
+    transition: 0.3s;
+}
+
+/* DARK MODE */
+body.dark {
+    background: linear-gradient(135deg,#222,#333);
+}
+
+body.dark .container {
+    background: #2a2a2a;
+}
+
+body.dark h1, body.dark li, body.dark span {
+    color: #fff;
+}
+
+body.dark #themeBtn, body.dark #focusBtn {
+    background: #333;
+    color: #ff69b4;
+    border: 1px solid #ff69b4;
+}
+
+body.dark #themeBtn:hover, body.dark #focusBtn:hover {
+    background: #444;
+}
